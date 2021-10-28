@@ -42,7 +42,6 @@ function randerAvatar(user) {
     } else {
         $('.layui-nav-img').hide()
         var first = name[0].toUpperCase()
-        console.log(first);
         $('.text-avatar').html(first).show()
     }
 }
