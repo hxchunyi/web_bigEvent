@@ -5,11 +5,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>大事件--首页</title>
+    <!-- 引入layui的样式表 -->
+    <link rel="stylesheet" href="assets/lib/layui/css/layui.css">
+    <!-- 引入第三方的字体库 -->
+    <link rel="stylesheet" href="assets/fonts/iconfont.css">
+    <!-- 引入自己的样式表 -->
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 
 <body>
 
-</body>
+    <body class="layui-layout-body">
+        <div class="layui-layout layui-layout-admin">
+            <div class="layui-header">
+                <div class="layui-logo">
+                    <img src="assets/images/logo.png" alt="" />
+
+                </div>
+                <!-- 头部区域（可配合layui已有的水平导航） -->
+                <ul class="layui-nav layui-layout-right">
+                    <li class="layui-nav-item userinfo">
+                        <a href="javascript:;">
+                            <img src="http://t.cn/RCzsdCq" class="layui-nav-img" />
+                            <span class="text-avatar">A</span> 个人中心
+                        </a>
+
+                        <dl class="layui-nav-child">
+                            <dd><a href="">基本资料</a></dd>
+                            <dd><a href="">更换头像</a></dd>
+                            <dd><a href="">重置密码</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item"><a href="javascript:;" id="btnLogout"><span class="iconfont icon-tuichu"></span>退出</a></li>
+                </ul>
+            </div>
+
+            <div class="layui-side layui-bg-black">
+                <div class="layui-side-scroll">
+
+                    <li class="layui-nav-item userinfo">
+                        <a href="javascript:;">
+                            <img src="http://t.cn/RCzsdCq" class="layui-nav-img" />
+                        </a>
+                        <span class="text-avatar">A</span>
+                        <span id="welcomeUser">欢迎 ***</span>
+                    </li>
+
+                    <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                    <ul class="layui-nav layui-nav-tree" lay-shrink="all">
+                        <li class="layui-nav-item layui-this"><a href="home/dashboard.html" target="fm"><span class="iconfont icon-home"></span>首页</a></li>
+
+                        <li class="layui-nav-item">
+                            <a class="" href="javascript:;"><span class="iconfont icon-16"></span>文章管理</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>文章类别</a></dd>
+                                <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>文章列表</a></dd>
+                                <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>发表文章</a></dd>
+                            </dl>
+                        </li>
+                        <li class="layui-nav-item">
+                            <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>基本资料</a></dd>
+                                <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>更换头像</a></dd>
+                                <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>重置密码</a></dd>
+
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="layui-body">
+                <!-- 内容主体区域 -->
+                <iframe src="home/dashboard.html" name="fm" frameborder="0" class="fm"></iframe>
+            </div>
+
+            <div class="layui-footer">
+                <!-- 底部固定区域 -->
+                © http://chunyi.usa3v.vip/ - 河西学院春意
+            </div>
+        </div>
+        <!-- 引入layui的js文件 -->
+        <script src="assets/lib/layui/layui.all.js"></script>
+        <!-- 引入jQuery -->
+        <script src="assets/lib/jquery.js"></script>
+        <!-- 引入自己封装的baseAPI -->
+        <script src="assets/js/baseAPI.js"></script>
+        <!-- 引入自己的js -->
+        <script src="assets/js/index.js"></script>
+    </body>
 
 </html>
