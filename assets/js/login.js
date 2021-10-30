@@ -31,7 +31,6 @@ $(
                     username: $('#form_reg [name = username]').val(),
                     password: $('#form_reg [name = password]').val()
                 }
-                console.log(data);
                 $.post('/api/reguser', data, function(res) {
                     if (res.status !== 0) {
                         return layer.msg(res.message);
@@ -44,7 +43,6 @@ $(
             e.preventDefault()
                 // 获取表单的数据
             var data = $('#form_login').serialize()
-            console.log(data);
             $.ajax({
                 method: 'POST',
                 url: '/api/login',
